@@ -1,7 +1,7 @@
 import requests as req
 import sys
 
-url = "http://keeplink.kr:10105/web_basic_edit.html"
+url = ""
 id_ = 'tmpid'
 pw_ = 'tmppw'
 age_ = '8'
