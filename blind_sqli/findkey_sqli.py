@@ -2,14 +2,14 @@
 import requests as req
 import sys
 
-EDIT_URL = "http://keeplink.kr:10105/web_basic_edit_ok.php"
+EDIT_URL = ""
 ID = "testid"
 PW = "testpw"
 AGE = "8"
 EMAIL = "testemali"
 
 def doCheckInjectionResult(): # 결과를 확인
-    LOGIN_URL = "http://keeplink.kr:10105/web_basic_ok.php"
+    LOGIN_URL = ""
     data_q = {'id':ID, 'pw':PW}
     res = req.post(LOGIN_URL, data=data_q)
     if 'Mr' in res.text:
